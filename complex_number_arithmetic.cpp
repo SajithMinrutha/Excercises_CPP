@@ -1,5 +1,6 @@
 #include <iostream>
 using std::cout;
+using std::endl;
 
 class Complex
 {
@@ -8,13 +9,12 @@ private:
     double imaginary;
 
 public:
-    Complex(double a, double b) : real(a), imaginary(b) {}
-    Complex operator+(const Complex &other)
+    Complex(double a = 0.0, double b = 0.0) : real(a), imaginary(b) {}
+    Complex operator+(const Complex &other) const
     {
         return Complex(real + other.real, imaginary + other.imaginary);
     }
-    Complex operator-(const Complex &other)
-
+    Complex operator-(const Complex &other) const
     {
         return Complex(real - other.real, imaginary - other.imaginary);
     }
@@ -22,10 +22,35 @@ public:
     {
         return Complex(-real, -imaginary);
     }
+    void print() const
+    {
+        if (imaginary > 0)
+            cout << real << " + " << imaginary << "i" << endl;
+        else if (imaginary < 0)
+            cout << real << " - " << -imaginary << "i" << endl;
+        else
+            cout << real << endl;
+    }
 };
 
 int main()
 {
+    Complex c1(3.5, 2.0);
+    Complex c2(1.0, -1.5);
+
+    Complex c3 = c1 + c2;
+    Complex c4 = c1 - c2;
+
+    Complex c5 = -c1;
+
+    c1.print();
+
+    c2.print();
+    c3.print();
+
+    c4.print();
+
+    c5.print();
 
     return 0;
 }
