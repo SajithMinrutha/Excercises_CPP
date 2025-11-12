@@ -8,12 +8,85 @@ This repository contains my solutions to various C++ programming exercises as I 
 
 Here is a list of the exercises I have completed so far:
 
-*   **Shape Hierarchy:** A project demonstrating object-oriented principles like inheritance and polymorphism to model different geometric shapes.
-*   **Bank Account:** A simple bank account management system, focusing on classes, objects, and encapsulation.
-*   **Function Exercise:** A collection of small programs to practice writing and using functions in C++.
-*   **Simple Calculator:** A basic command-line calculator to handle arithmetic operations.
-*   **Text Analyzer:** A program that analyzes a text file to provide statistics like word count, character count, etc.
+### Core Concepts & Fundamentals
+
+- **Function Exercise** (`FunctionExercise/function_excercise.cpp`): A collection of small programs to practice writing and using functions in C++, including function definitions, parameters, return types, and function overloading.
+
+- **Simple Calculator** (`SimpleCalc/simple_cal.cpp`): A basic command-line calculator to handle arithmetic operations (+, -, \*, /). Demonstrates user input handling and basic arithmetic logic.
+
+### Object-Oriented Programming
+
+- **Bank Account** (`BankAccount/bank_account.cpp`): A simple bank account management system, focusing on classes, objects, and encapsulation. Includes deposit, withdrawal, and balance inquiry functionality.
+
+- **Shape Hierarchy** (`ShapeHierarchy/Shape_Hierarchy.cpp`): A project demonstrating object-oriented principles like inheritance and polymorphism to model different geometric shapes. Calculates area and perimeter for various shapes.
+
+### Advanced Applications
+
+- **Complex Number Arithmetic** (`ComplexNumberArithemetic/complex_number_arithmetic.cpp`): A program that implements complex number operations (addition, subtraction, multiplication, division) using classes and operator overloading.
+
+- **Text Analyzer** (`TextAnalyzer/text_analyzer.cpp`): A program that analyzes text files to provide statistics like word count, character count, line count, and frequency analysis.
+
+- **Inventory Manager** (`InventoryManager/inventory_manager.cpp`): An inventory management system that tracks products, quantities, and prices. Demonstrates data structures, searching, and updating records.
 
 ---
 
-*This repository is used for tracking my C++ learning progress.*
+## Project Structure
+
+```
+myExercises/
+├── BankAccount/
+│   └── bank_account.cpp
+├── ComplexNumberArithemetic/
+│   └── complex_number_arithmetic.cpp
+├── FunctionExercise/
+│   └── function_excercise.cpp
+├── InventoryManager/
+│   └── inventory_manager.cpp
+├── ShapeHierarchy/
+│   └── Shape_Hierarchy.cpp
+├── SimpleCalc/
+│   └── simple_cal.cpp
+├── TextAnalyzer/
+│   └── text_analyzer.cpp
+└── README.md
+```
+
+---
+
+## Building & Running
+
+Each project is a standalone C++ program. To compile and run:
+
+### Compile a project (macOS/Linux with clang++ or g++):
+
+```bash
+clang++ -std=c++20 -o executable_name path/to/source.cpp
+# or
+g++ -std=c++17 -o executable_name path/to/source.cpp
+```
+
+### Run the executable:
+
+```bash
+./executable_name
+```
+
+### Example:
+
+```bash
+clang++ -std=c++20 -o calculator SimpleCalc/simple_cal.cpp
+./calculator
+```
+
+---
+
+## Tools & Environment
+
+- **Language:** C++17/C++20
+- **Compiler:** clang++ or g++
+- **IDE:** Visual Studio Code
+- **Platform:** macOS
+
+---
+
+_This repository is used for tracking my C++ learning progress._
