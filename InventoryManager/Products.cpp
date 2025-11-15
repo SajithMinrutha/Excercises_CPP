@@ -21,3 +21,7 @@ string Products::getName()
 {
     return product_name;
 }
+int Products::getPrice()
+{
+    return product_price;
+}

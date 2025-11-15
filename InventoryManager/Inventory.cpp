@@ -2,6 +2,9 @@
 #include "Inventory.h"
 #include <iostream>
 #include <string>
+#include <vector>
+#include <iterator>
+#include <algorithm>
 
 using std::cin;
 using std::cout;
@@ -36,7 +39,7 @@ void Inventory::findProductById(int id)
     {
         Products product_is = products[id];
         string prod = product_is.getName();
-        cout << "The product with the id " << id << " is" << prod;
+        cout << "The product with the id " << id << " is " << prod << "\n";
     }
     else
     {
@@ -45,13 +48,53 @@ void Inventory::findProductById(int id)
 }
 void Inventory::sortProductsByName()
 {
+    std::vector<std::pair<int, Products>> v;
+    std::copy(products.begin(), products.end(), std::back_inserter(v));
+    std::sort(v.begin(), v.end(), [](const auto &a, const auto &b))
+    {
+        return a.second.getName() < b.second.getName();
+    }
+
+    for (const auto &p : v)
+    {
+        cout << p.first << " " << p.second.getName() << "\n";
+    }
 }
 void Inventory::listAllProducts()
 {
+    for (auto &item : products)
+    {
+        cout << "ID: " << item.first
+             << ", Name: " << item.second.getName()
+             << ", Quantity: " << item.second.getQuantity()
+             << ", Price: " << item.second.getPrice() // if you have getPrice()
+             << "\n";
+    }
 }
 void Inventory::listProductsBelowQuantity(int quantity)
 {
+    std::cout << "Products with quantity below " << quantity << ":\n";
+
+    for (auto &item : products)
+    {
+        if (item.second.getQuantity() < quantity)
+        {
+            cout << "ID: " << item.first
+                 << ", Name: " << item.second.getName()
+                 << ", Quantity: " << item.second.getQuantity()
+                 << "\n";
+        }
+    }
 }
+
 void Inventory::calculateTotalInventoryValue()
 {
+    double totalValue = 0;
+
+    for (auto &item : products)
+    {
+        totalValue += item.second.getQuantity() * item.second.getPrice();
+    }
+
+    cout << "Total inventory value: $" << totalValue << "\n";
 }

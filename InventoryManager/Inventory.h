@@ -2,7 +2,7 @@
 #define INVENTORY_H
 #include "Products.h"
 #include <iostream>
-#include <map>;
+#include <map>
 
 using std::string;
 
@@ -12,6 +12,7 @@ class Inventory
 public:
     std::map<int, Products> products;
     static int next_id;
+
     void addProduct(string product_name, int price);
 
     void removeProduct(int id);

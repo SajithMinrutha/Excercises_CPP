@@ -10,7 +10,7 @@ public:
 
     static int invalid_product_name_check(string product_name);
 
-    static int invalid_price_check(string product_name, int product_price);
+    static int invalid_price_check(int product_price);
 
     static int invalid_product_quantity_check(int product_quantity);
 };

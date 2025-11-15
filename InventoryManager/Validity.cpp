@@ -16,7 +16,7 @@ int Validity::invalid_id_check(int id)
         return 1;
     }
 }
-static int invalid_product_name_check(string product_name)
+int Validity::invalid_product_name_check(string product_name)
 {
 
     if (product_name != "")
@@ -27,7 +27,7 @@ static int invalid_product_name_check(string product_name)
         return 1;
     }
 }
-static int invalid_price_check(string product_name, int product_price)
+int Validity::invalid_price_check(int product_price)
 {
     if (product_price > 0)
         return 0;
@@ -37,7 +37,7 @@ static int invalid_price_check(string product_name, int product_price)
         return 1;
     }
 }
-static int invalid_product_quantity_check(int product_quantity)
+int Validity::invalid_product_quantity_check(int product_quantity)
 {
     if (product_quantity > 0)
         return 0;

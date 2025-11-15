@@ -14,16 +14,16 @@ Menu::Menu(Inventory &currentInventory)
     while (true)
     {
         string answer;
-        cout << "-------Welcome--------\n";
+        cout << "\n-------Welcome--------\n";
 
-        cout << "1.Add A Product";
-        cout << "2.Remove A Product ";
-        cout << "3.Update A Product Quantity";
-        cout << "4.Find A Product";
-        cout << "5.List All Products";
-        cout << "6.List All Products Below Quantity";
-        cout << "7.Sort Products By Name";
-        cout << "8.Calculate Total Inventory Value";
+        cout << "1.Add A Product\n";
+        cout << "2.Remove A Product \n";
+        cout << "3.Update A Product Quantity\n";
+        cout << "4.Find A Product\n";
+        cout << "5.List All Products\n";
+        cout << "6.List All Products Below Quantity\n";
+        cout << "7.Sort Products By Name\n";
+        cout << "8.Calculate Total Inventory Value\n";
         cout << "Type (1-8) or Type 'exit' to exit\n"
              << endl;
 
@@ -115,7 +115,7 @@ Menu::Menu(Inventory &currentInventory)
         }
         else if (answer == "exit")
         {
-            cout << "Good Bye! \n";
+            cout << "\nGood Bye! \n";
             break;
         }
     }

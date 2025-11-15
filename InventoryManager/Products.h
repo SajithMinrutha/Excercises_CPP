@@ -1,6 +1,7 @@
 #ifndef PRODUCTS_H
 #define PRODUCTS_H
 #include <iostream>
+#include <string>
 using std::string;
 
 class Products
@@ -15,6 +16,7 @@ public:
     Products(const string &name, int price);
     void setQuantity(int new_quantity);
     int getQuantity();
+    int getPrice();
     string getName();
 };
 #endif
