@@ -91,4 +91,4 @@ clang++ -std=c++20 -o calculator SimpleCalc/simple_cal.cpp
 
 ---
 
-This repository is used for tracking my C++ learning progress.
+This repository is used for tracking my C++ progress.
